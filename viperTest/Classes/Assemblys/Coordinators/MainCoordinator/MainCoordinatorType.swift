@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MainCoordinatorType: CoordinatorType {
-	
+	func goLoginModul()
 }

@@ -15,6 +15,11 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorType {
         router.setRootModule(module)
     }
     
+    func goLoginModul() {
+        let module = container.resolve(LoginAssembly.self).build(coordinator: self)
+        module.input.setUserInfo(userInfo: "User")
+        router.push(module)
+    }
     override func toPresent() -> UIViewController {
         return router.rootViewController!
     }

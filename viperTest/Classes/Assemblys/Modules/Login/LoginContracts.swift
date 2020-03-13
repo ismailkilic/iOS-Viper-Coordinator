@@ -10,7 +10,7 @@ import Foundation
 
 // Module Input
 protocol LoginModuleInput {
-    
+    func setUserInfo(userInfo: String)
 }
 
 // Module Output

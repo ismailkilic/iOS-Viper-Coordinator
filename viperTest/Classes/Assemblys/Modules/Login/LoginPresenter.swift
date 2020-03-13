@@ -20,7 +20,11 @@ extension LoginPresenter {
 }
 
 // MARK: Module Input
-extension LoginPresenter: LoginModuleInput {
+extension LoginPresenter: LoginModuleInput {  
+    func setUserInfo(userInfo: String) {
+        print(userInfo)
+    }
+    
     
 }
 
