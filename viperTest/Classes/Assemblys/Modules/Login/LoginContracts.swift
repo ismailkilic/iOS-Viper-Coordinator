@@ -10,7 +10,6 @@ import Foundation
 
 // Module Input
 protocol LoginModuleInput {
-    func setUserInfo(userInfo: String)
 }
 
 // Module Output
@@ -19,19 +18,22 @@ protocol LoginModuleOutput {
 }
 
 // View Input
-protocol LoginViewInput: class {
+protocol LoginViewInput: BaseView {
     func set(title: String)
 }
 
 // View Output
 protocol LoginViewOutput: class {
     func viewDidLoad()
+    func loginUser(userName: String, userPassword: String)
 }
 
 // Interactor
 protocol LoginInteractorInput {
+    func userLogin(userName: String, userPassword: String, completion: @escaping (Bool, String?) -> Void)
 }
 
 // Router
 protocol LoginRouterProtocol: AlertRoutable {
+    func goMainPage(user: String)
 }

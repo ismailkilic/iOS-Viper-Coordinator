@@ -88,9 +88,8 @@
 		2C03B68024168F0500941330 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03B67924168F0500941330 /* LoginViewController.swift */; };
 		2C03B68124168F0500941330 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03B67A24168F0500941330 /* LoginAssembly.swift */; };
 		2C03B68224168F0500941330 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03B67B24168F0500941330 /* LoginInteractor.swift */; };
-		2C109C312419260500D060E5 /* LoginCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C109C2E2419260500D060E5 /* LoginCoordinatorAssembly.swift */; };
-		2C109C322419260500D060E5 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C109C2F2419260500D060E5 /* LoginCoordinator.swift */; };
-		2C109C332419260500D060E5 /* LoginCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C109C302419260500D060E5 /* LoginCoordinatorType.swift */; };
+		2CF09274241F9CAD00256C8C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF09273241F9CAD00256C8C /* BaseView.swift */; };
+		2CF09276241F9D7B00256C8C /* ActivityIndicatorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF09275241F9D7B00256C8C /* ActivityIndicatorUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,9 +188,8 @@
 		2C03B67924168F0500941330 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C03B67A24168F0500941330 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		2C03B67B24168F0500941330 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		2C109C2E2419260500D060E5 /* LoginCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorAssembly.swift; sourceTree = "<group>"; };
-		2C109C2F2419260500D060E5 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		2C109C302419260500D060E5 /* LoginCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorType.swift; sourceTree = "<group>"; };
+		2CF09273241F9CAD00256C8C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2CF09275241F9D7B00256C8C /* ActivityIndicatorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +291,6 @@
 		2C03B5B024168D7F00941330 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				2C109C232419256500D060E5 /* LoginCoordinator */,
 				2C03B5B124168D7F00941330 /* AppCoordinator */,
 				2C03B5B824168D7F00941330 /* MainCoordinator */,
 			);
@@ -439,6 +436,7 @@
 			children = (
 				2C03B5F224168D7F00941330 /* ContainerView */,
 				2C03B5F524168D7F00941330 /* ViewBuilder */,
+				2CF09273241F9CAD00256C8C /* BaseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,6 +606,7 @@
 			isa = PBXGroup;
 			children = (
 				2C03B64224168D8000941330 /* Tweaks */,
+				2CF09275241F9D7B00256C8C /* ActivityIndicatorUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -694,16 +693,6 @@
 				2C03B67B24168F0500941330 /* LoginInteractor.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		2C109C232419256500D060E5 /* LoginCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				2C109C2F2419260500D060E5 /* LoginCoordinator.swift */,
-				2C109C2E2419260500D060E5 /* LoginCoordinatorAssembly.swift */,
-				2C109C302419260500D060E5 /* LoginCoordinatorType.swift */,
-			);
-			path = LoginCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -811,7 +800,6 @@
 			files = (
 				2C03B64624168D8000941330 /* ThreadTweak.swift in Sources */,
 				2C03B63824168D8000941330 /* DependencyContainer.swift in Sources */,
-				2C109C332419260500D060E5 /* LoginCoordinatorType.swift in Sources */,
 				2C03B5A624168D7F00941330 /* MainContracts.swift in Sources */,
 				2C03B65424168D8000941330 /* Theme.swift in Sources */,
 				2C03B5DD24168D7F00941330 /* LaunchInstructor.swift in Sources */,
@@ -841,13 +829,14 @@
 				2C03B61024168D7F00941330 /* NSObject+Ext.swift in Sources */,
 				2C03B5CD24168D7F00941330 /* EnvironmentServiceType.swift in Sources */,
 				2C03B68024168F0500941330 /* LoginViewController.swift in Sources */,
+				2CF09276241F9D7B00256C8C /* ActivityIndicatorUtil.swift in Sources */,
 				2C03B61E24168D7F00941330 /* UIImage+Ext.swift in Sources */,
 				2C03B5F424168D7F00941330 /* ContainerView.swift in Sources */,
 				2C03B60D24168D7F00941330 /* FileManager+Ext.swift in Sources */,
 				2C03B5FA24168D7F00941330 /* BasePresenter.swift in Sources */,
+				2CF09274241F9CAD00256C8C /* BaseView.swift in Sources */,
 				2C03B5BA24168D7F00941330 /* MainCoordinator.swift in Sources */,
 				2C03B64424168D8000941330 /* DeviceTweak.swift in Sources */,
-				2C109C322419260500D060E5 /* LoginCoordinator.swift in Sources */,
 				2C03B62E24168D7F00941330 /* UIViewController+Ext.swift in Sources */,
 				2C03B5CB24168D7F00941330 /* EnvironmentServiceAssembly.swift in Sources */,
 				2C03B64E24168D8000941330 /* ExempleResponse.swift in Sources */,
@@ -857,7 +846,6 @@
 				2C03B5A324168D7F00941330 /* MainPresenter.swift in Sources */,
 				2C03B5E724168D7F00941330 /* AlertRoutable.swift in Sources */,
 				2C03B67E24168F0500941330 /* LoginRouter.swift in Sources */,
-				2C109C312419260500D060E5 /* LoginCoordinatorAssembly.swift in Sources */,
 				2C03B5D724168D7F00941330 /* Module.swift in Sources */,
 				2C03B64024168D8000941330 /* WeakContainer.swift in Sources */,
 				2C03B67D24168F0500941330 /* LoginPresenter.swift in Sources */,

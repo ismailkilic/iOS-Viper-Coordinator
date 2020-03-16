@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MainViewController: UIViewController, MainViewInput {
+class MainViewController: UIViewController {
     var output: MainViewOutput!
-    @IBOutlet weak var btnLogin: UIButton!
     
+    @IBOutlet weak var lbl_userLoginMessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewDidLoad()
@@ -25,7 +25,11 @@ extension MainViewController {
 }
 
 // MARK: View Input
-extension MainViewController {
+extension MainViewController: MainViewInput {
+    func setUserMessage(message: String) {
+        lbl_userLoginMessage.text = message
+    }
+    
     func set(title: String) {
         self.title = title
     }
@@ -33,7 +37,5 @@ extension MainViewController {
 
 // MARK: Button Action
 extension MainViewController {
-    @IBAction func onClick_btnLogin(_ sender: Any) {
-        output.btnLoginClicked()
-    }
+    
 }

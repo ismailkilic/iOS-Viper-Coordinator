@@ -19,7 +19,6 @@ class AppDelegate: AppDelegateManager {
         // Setup Coordinators
         container.apply(AppCoordinatorAssembly.self)
         container.apply(MainCoordinatorAssembly.self)
-        container.apply(LoginCoordinatorAssembly.self)
         
         // Setup Modules
         container.apply(MainAssembly.self)

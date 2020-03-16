@@ -10,6 +10,6 @@ import Foundation
 
 class MainRouter: BaseModuleRouter, MainRouterProtocol {
     func goLoginPage() {
-        container.resolve(MainCoordinatorAssembly.self).build(router: coordinator.router).goLoginModul()
+        //container.resolve(MainCoordinatorAssembly.self).build(router: coordinator.router).goLoginModul()
     }  
 }

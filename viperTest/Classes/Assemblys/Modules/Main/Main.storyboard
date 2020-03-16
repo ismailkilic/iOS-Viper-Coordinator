@@ -23,14 +23,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofR-8K-may">
-                                <rect key="frame" x="169" y="405" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onClick_btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8nw-IK-Vy6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -40,7 +32,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9f1-BB-wnl"/>
                     <connections>
-                        <outlet property="btnLogin" destination="ofR-8K-may" id="AV9-a8-sit"/>
+                        <outlet property="lbl_userLoginMessage" destination="Ctk-X8-bTH" id="mrr-Ur-dQ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -50,6 +42,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ICf-T2-8F0">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DfD-4E-03B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tLp-sy-kdW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oaj-0u-HEb">
@@ -61,7 +54,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3hO-CS-pOc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DfD-4E-03B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-343.19999999999999" y="107.49625187406298"/>
         </scene>

@@ -10,7 +10,7 @@ import UIKit
 
 // Module Input
 protocol MainModuleInput {
-    
+    func setUserInfo(userInfo: String)
 }
 
 // Module Output
@@ -19,8 +19,9 @@ protocol MainModuleOutput: ModuleOutput {
 }
 
 // View Input
-protocol MainViewInput: AnyObject {
+protocol MainViewInput: BaseView {
     func set(title: String)
+    func setUserMessage(message: String)
 }
 
 // View Output
@@ -31,7 +32,7 @@ protocol MainViewOutput: AnyObject {
 
 // Interactor
 protocol MainInteractorInput {
-
+    
 }
 
 // Router

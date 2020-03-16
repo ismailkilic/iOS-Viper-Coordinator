@@ -11,6 +11,7 @@ import Foundation
 class MainPresenter: BasePresenter<MainInteractorInput, MainRouterProtocol>, MainModuleOutput {
     // MARK: - Weak properties
     weak var view: MainViewInput?
+    var userInfo: String?
     
     func goLogin() {
         router.goLoginPage()
@@ -24,6 +25,10 @@ extension MainPresenter {
 
 // MARK: Module Input
 extension MainPresenter: MainModuleInput {
+    func setUserInfo(userInfo: String) {
+        self.userInfo = userInfo
+    }
+    
     
 }
 
@@ -35,5 +40,6 @@ extension MainPresenter: MainViewOutput {
     
     func viewDidLoad() {
         view?.set(title: "Main")
+        view?.setUserMessage(message: "Hoş geldin \(userInfo ?? "")")
     }
 }

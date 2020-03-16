@@ -19,19 +19,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="508-5s-Q5C">
-                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="66" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jX1-eX-6Pu">
+                                <rect key="frame" x="127.5" y="107" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Dw4-yM-1Rf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3X4-kB-71f">
+                                <rect key="frame" x="127.5" y="151" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="LnU-cJ-kyF"/>
+                                    <constraint firstAttribute="width" constant="120" id="xHf-ay-Cpj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw0-8D-DRV">
+                                <rect key="frame" x="147.5" y="215" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="M4V-Xh-n1a"/>
+                                </constraints>
+                                <state key="normal" title="Giriş Yap"/>
+                                <connections>
+                                    <action selector="onClick_btnLogin:" destination="d8s-zC-T2t" eventType="touchUpInside" id="Dmt-Lk-Zh3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="3X4-kB-71f" firstAttribute="top" secondItem="jX1-eX-6Pu" secondAttribute="bottom" constant="10" id="7FF-Oj-5Op"/>
+                            <constraint firstItem="508-5s-Q5C" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" constant="66" id="8lM-80-2Dl"/>
+                            <constraint firstItem="tw0-8D-DRV" firstAttribute="top" secondItem="3X4-kB-71f" secondAttribute="bottom" constant="30" id="UOU-gc-rn6"/>
+                            <constraint firstItem="3X4-kB-71f" firstAttribute="centerX" secondItem="IFj-I9-EFs" secondAttribute="centerX" id="WaX-eS-QZa"/>
                             <constraint firstItem="508-5s-Q5C" firstAttribute="centerX" secondItem="IFj-I9-EFs" secondAttribute="centerX" id="lQu-vz-lDb"/>
-                            <constraint firstItem="508-5s-Q5C" firstAttribute="centerY" secondItem="IFj-I9-EFs" secondAttribute="centerY" id="nqG-Xh-c1c"/>
+                            <constraint firstItem="tw0-8D-DRV" firstAttribute="centerX" secondItem="IFj-I9-EFs" secondAttribute="centerX" id="m71-UR-oB3"/>
+                            <constraint firstItem="jX1-eX-6Pu" firstAttribute="centerX" secondItem="IFj-I9-EFs" secondAttribute="centerX" id="w84-OV-O9i"/>
+                            <constraint firstItem="jX1-eX-6Pu" firstAttribute="top" secondItem="508-5s-Q5C" secondAttribute="bottom" constant="20" id="yWZ-uJ-c1A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i2Z-2f-Val"/>
+                    <connections>
+                        <outlet property="tf_userName" destination="jX1-eX-6Pu" id="5gk-Rv-jaD"/>
+                        <outlet property="tf_userPassword" destination="3X4-kB-71f" id="EP7-Rk-xjg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqd-wc-fRj" sceneMemberID="firstResponder"/>
             </objects>
